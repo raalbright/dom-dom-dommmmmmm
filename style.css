@@ -1,0 +1,13 @@
+.blocks {
+    margin-top: 2em;
+}
+
+.block {
+    width: 6rem;
+    height: 6rem;
+    margin: 0.25rem;
+    background-color: #000;
+    display: inline-block;
+    font-size: 4em;
+    text-align: center;
+}
