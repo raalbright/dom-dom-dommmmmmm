@@ -6,7 +6,7 @@ const handleMouseEnter = ({ target }) => target.style.color = 'white';
 
 const handleMouseLeave = ({ target }) => target.style.color = target.style.backgroundColor;
 
-const generateRandomColor = () => 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+const generateRandomColor = () => `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
 
 const handleClick = ({ target }) => target.style.backgroundColor = generateRandomColor();
 
@@ -26,7 +26,7 @@ const addBlock = () => {
 
     block.classList.add('block');
     block.id = blocksDiv.childElementCount + 1;
-    block.innerText = block.id;
+    block.appendChild(document.createTextNode(block.id));
 
     block.addEventListener('mouseenter', handleMouseEnter);
     block.addEventListener('mouseleave', handleMouseLeave);
